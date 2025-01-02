@@ -1,33 +1,24 @@
 <?php
 class Usuarios
 {
-    private $codusuario;
-    private $perfil;
+    private $id;
     private $nombre;
-    private $clave;
-    private $fechaalta;
-    private $email;
-    private $pobla;
+    private $ape1;
+    private $ape2;
+    private $rol;
 
-    function __construct($codusuario, $perfil, $nombre, $clave, $fechaalta, $email, $pobla)
+    function __construct($id, $nombre, $ape1, $ape2, $rol)
     {
-        $this->codusuario = $codusuario;
-        $this->perfil = $perfil;
+        $this->id = $id;
         $this->nombre = $nombre;
-        $this->clave = $clave;
-        $this->fechaalta = $fechaalta;
-        $this->email = $email;
-        $this->pobla = $pobla;
+        $this->ape1 = $ape1;
+        $this->ape2 = $ape2;
+        $this->rol = $rol;
     }
 
-    function getCodusuario()
+    function getId()
     {
-        return $this->codusuario;
-    }
-
-    function getPerfil()
-    {
-        return $this->perfil;
+        return $this->id;
     }
 
     function getNombre()
@@ -35,34 +26,24 @@ class Usuarios
         return $this->nombre;
     }
 
-    function getClave()
+    function getApe1()
     {
-        return $this->clave;
+        return $this->ape1;
     }
 
-    function getFechaalta()
+    function getApe2()
     {
-        return $this->fechaalta;
+        return $this->ape2;
     }
 
-    function getEmail()
+    function getRol()
     {
-        return $this->email;
+        return $this->rol;
     }
 
-    function getPobla()
+    function setId($id): void
     {
-        return $this->pobla;
-    }
-
-    function setCodusuario($codusuario): void
-    {
-        $this->codusuario = $codusuario;
-    }
-
-    function setPerfil($perfil): void
-    {
-        $this->perfil = $perfil;
+        $this->id = $id;
     }
 
     function setNombre($nombre): void
@@ -70,23 +51,18 @@ class Usuarios
         $this->nombre = $nombre;
     }
 
-    function setClave($clave): void
+    function setApe1($ape1): void
     {
-        $this->clave = $clave;
+        $this->ape1 = $ape1;
     }
 
-    function setFechaalta($fechaalta): void
+    function setApe2($ape2): void
     {
-        $this->fechaalta = $fechaalta;
+        $this->ape2 = $ape2;
     }
 
-    function setEmail($email): void
+    function setRol($rol): void
     {
-        $this->email = $email;
-    }
-
-    function setPobla($pobla): void
-    {
-        $this->pobla = $pobla;
+        $this->rol = $rol;
     }
 }
