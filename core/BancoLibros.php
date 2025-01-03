@@ -1,50 +1,57 @@
 <?php
-abstract class Conexion
+
+class BancoLibros
 {
+    private $servername = "localhost:3306";
+    private $database = "biblioteca_digital";
+    private $username = "root";
+    private $password = "";
     private $conexion;
     private $mensajeerror = "";
+
+    # Conectar a la base de datos
 
     public function getConexion()
     {
         try {
             $this->conexion = new PDO(
-                "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
-                DB_USER,
-                DB_PASS
+                "mysql:host=$this->servername;dbname=$this->database;charset=utf8",
+                $this->username,
+                $this->password
             );
             $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $this->conexion;
         } catch (PDOException $e) {
             $this->mensajeerror = $e->getMessage();
-            return null; // Return null on error
         }
     }
+
+    # Desconectar la base de datos
 
     public function closeConexion()
     {
         $this->conexion = null;
     }
 
+    # Devolver mensaje de error, por si hay error.
+
     public function getMensajeError()
     {
         return $this->mensajeerror;
     }
 
+    # Traer resultados de una consulta sin parámetros en un Array
+
     public function getAllreg($tabla)
     {
-        if (!$this->conexion) {
-            $this->getConexion(); // Ensure connection is established
-        }
-
         try {
             $sql = "SELECT * FROM $tabla";
             $statement = $this->conexion->query($sql);
-            $registros = $statement->fetchAll(PDO::FETCH_ASSOC); // Fetch as associative array
+            $registros = $statement->fetchAll(PDO::FETCH_ASSOC);
             $statement = null;
-            return $registros; // Return the fetched records
+            return $registros;
         } catch (PDOException $e) {
             $this->mensajeerror = $e->getMessage();
-            return []; // Return an empty array on error
         }
     }
 }

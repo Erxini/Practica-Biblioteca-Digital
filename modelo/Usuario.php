@@ -1,5 +1,5 @@
 <?php
-require_once 'config/database.php';
+require_once 'config/dataBase.php';
 
 /**
  * Modelo para la gestión de usuarios.
@@ -10,8 +10,8 @@ class Usuario
 
     public function __construct()
     {
-        $database = new Banco();
-        $this->conexion = $database->conectar();
+        $database = new BancoLibros();
+        $this->conexion = $database->getConexion();
     }
 
     /**

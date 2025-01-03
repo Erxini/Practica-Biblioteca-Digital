@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <?php include 'templates/header.php'; ?>
+    <?php include './vista/comun/cabecera.php'; ?>
     <main>
         <h1>Iniciar Sesión</h1>
         <?php if (isset($mensaje)): ?>
@@ -23,7 +23,7 @@
             <button type="submit">Iniciar Sesión</button>
         </form>
     </main>
-    <?php include 'templates/footer.php'; ?>
+    <?php include './vista/comun/pie.php'; ?>
 </body>
 
 </html>

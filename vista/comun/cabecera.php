@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./views/css/style.css">
+    <link rel="stylesheet" href="./../../recursos/css/style.css">
     <title>Biblioteca Digital</title>
 </head>
 
@@ -12,7 +12,7 @@
     <header id="header-site">
         <div id="box-img">
             <a href="index.php">
-                <img src="./views/src/logo.png" alt="Biblioteca Digital">
+                <img src="./../../recursos/imagenes/cabecera.jpg" alt="Biblioteca Digital">
             </a>
         </div>
 

@@ -1,5 +1,7 @@
 <?php
 
+require_once 'core/BancoLibros.php';
+
 class Banco
 {
     const HOST = 'localhost:3306';

@@ -8,7 +8,7 @@ class ControladorBase
 
     public function __construct()
     {
-        require_once "core/Banco.php";
+        require_once "core/BancoLibros.php";
         foreach (glob("modelo/*.php") as $file) {
             require_once $file;
         }

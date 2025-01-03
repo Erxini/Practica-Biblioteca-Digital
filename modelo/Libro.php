@@ -1,5 +1,5 @@
 <?php
-require_once 'config/database.php';
+require_once 'config/dataBase.php';
 
 /**
  * Modelo para la gestión de libros.
@@ -10,9 +10,10 @@ class Libro
 
     public function __construct()
     {
-        $database = new Banco();
-        $this->conexion = $database->conectar();
+        $database = new BancoLibros();
+        $this->conexion = $database->getConexion();
     }
+
 
     /**
      * Obtiene todos los libros de la base de datos.

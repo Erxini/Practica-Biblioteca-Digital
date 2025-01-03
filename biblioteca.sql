@@ -32,12 +32,12 @@ CREATE TABLE IF NOT EXISTS prestamos (
 -- Inserciones de prueba
 INSERT INTO usuarios (nombre, ape1, ape2, rol) VALUES 
 ('Admin', 'Admin', 'Admin', 'administrador'),
-('Juan', 'Perez', 'Gomez', 'registrado'),
-('Maria', 'Lopez', 'Garcia', 'registrado');
+('Sergio', 'Rueda', 'Gonzalez', 'registrado'),
+('Marta', 'Alonso', 'Talavera', 'registrado');
 
 INSERT INTO libros (ISBN, titulo, autor) VALUES 
 ('9781234567890', 'El Quijote', 'Miguel de Cervantes'),
-('9789876543210', 'Cien Años de Soledad', 'Gabriel Garcia Marquez');
+('9789876543210', 'El Último Catón', 'Matilde Asensi');
 
 INSERT INTO prestamos (ISBN, id_usuario, fecha_desde, fecha_hasta) VALUES 
 ('9781234567890', 2, '2025-01-01', '2025-01-15'),

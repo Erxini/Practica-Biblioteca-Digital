@@ -1,5 +1,5 @@
 <?php
-require_once 'config/database.php';
+require_once 'config/dataBase.php';
 
 /**
  * Modelo para la gestión de reservas.
@@ -10,8 +10,8 @@ class Reserva
 
     public function __construct()
     {
-        $database = new Banco();
-        $this->conexion = $database->conectar();
+        $database = new BancoLibros();
+        $this->conexion = $database->getConexion();
     }
 
     /**
@@ -39,5 +39,5 @@ class Reserva
         }
     }
 
-    // Otros métodos para la gestión de reservas...
+    // me faltan otros métodos para la gestión de reservas...
 }
