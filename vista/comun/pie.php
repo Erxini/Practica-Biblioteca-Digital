@@ -1,6 +1,6 @@
 <footer>
-    <img src="./../../../public/images/imagen_pie.jpg" alt="">
-    <p>&copy; <?php echo date("Y"); ?> Biblioteca Pública Nacional Española.</p>
+    <img src="./../../recursos/imagenes/imagen_pie.jpg" alt="">
+    <p>&copy; <?php echo date("Y"); ?> Biblioteca Pública Española.</p>
 </footer>
 </body>
 

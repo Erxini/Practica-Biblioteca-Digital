@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./views/css/style.css">
+    <link rel="stylesheet" href="./recursos/css/style.css">
     <title>Consultar Libros</title>
 </head>
 
 <body>
-    <?php include 'templates/header.php'; ?>
     <main>
         <h1>Consultar Libros</h1>
         <form action="index.php?controller=Libro&action=buscar" method="post">
@@ -18,7 +17,7 @@
             <button type="submit">Buscar</button>
         </form>
     </main>
-    <?php include 'templates/footer.php'; ?>
+    <?php include './vista/comun/pie.php'; ?>
 </body>
 
 </html>

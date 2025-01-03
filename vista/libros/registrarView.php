@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./views/css/style.css">
+    <link rel="stylesheet" href="./recursos/css/style.css">
     <title>Registrar Libro</title>
 </head>
 
 <body>
-    <?php include 'templates/header.php'; ?>
+    <?php include './vista/comun/cabecera.php'; ?>
     <main>
         <h1>Registrar Nuevo Libro</h1>
         <form action="index.php?controller=Libro&action=guardar" method="post">
@@ -22,7 +22,7 @@
             <button type="submit">Guardar</button>
         </form>
     </main>
-    <?php include 'templates/footer.php'; ?>
+    <?php include './vista/comun/pie.php'; ?>
 </body>
 
 </html>
