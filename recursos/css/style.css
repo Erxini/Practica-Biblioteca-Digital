@@ -1,0 +1,130 @@
+@import url('teste.css');
+
+/* Reset de estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+}
+
+/* Estilos para el encabezado del sitio */
+#header-site {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px 0;
+    background: #202021;
+    width: 100%;
+    position: relative;
+}
+
+#header-site #box-img img {
+    aspect-ratio: 1 / 1;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+#header-site nav {
+    align-content: center;
+}
+
+#header-site nav button {
+    display: none;
+    padding: 10px;
+    border: none;
+    background-color: unset;
+}
+
+#header-site nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+    #header-site nav button {
+        display: block;
+    }
+
+    #header-site nav ul {
+        width: 100%;
+        padding-bottom: 5px;
+        position: absolute;
+        top: 90%;
+        right: 0;
+        justify-content: center;
+        gap: 25px;
+        background-color: #202021;
+        opacity: 0;
+        transition: ease 1s;
+    }
+
+    #header-site nav ul.activo {
+        top: 100%;
+        opacity: 1;
+    }
+}
+
+#header-site nav ul li {
+    position: relative;
+}
+
+#header-site nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #fff;
+    transition: ease-in 3ms;
+}
+
+#header-site nav ul li:hover::after {
+    width: 100%;
+    animation: hoverItem 0.5s ease-in-out;
+}
+
+#header-site nav ul li:not(:hover)::after {
+    animation: removeHoverItem 0.5s ease-in-out;
+}
+
+#header-site nav ul li a {
+    display: inline-block;
+    padding: 8px 16px;
+    color: #fff;
+}
+
+#header-site #user {
+    align-content: center;
+}
+
+#header-site #user img {
+    width: 100%;
+    max-width: 45px;
+    height: 100%;
+    max-height: 45px;
+    filter: invert(1);
+}
+
+@keyframes hoverItem {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes removeHoverItem {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
